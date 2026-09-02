@@ -6,7 +6,7 @@
   outputs =
     { self, nixpkgs }:
     let
-      version = "2026.08.3";
+      version = "2026.09.1";
 
       # Upstream artifact filename and hex sha256 per Nix system.
       # Generated from enumctl/hack/flake.nix.tpl by enumctl/hack/update-nix.sh.
@@ -15,19 +15,19 @@
       artifacts = {
         "x86_64-linux" = {
           file = "enumctl-linux-amd64";
-          sha256 = "7caa767885cf506be219dfaa5cfbc0434ca722008a34c4f884da4dc9474d73a3";
+          sha256 = "25f8169cd1d15e2cd41d9987d248ba5f9cb59012477842dcae1ff379ecb431d7";
         };
         "aarch64-linux" = {
           file = "enumctl-linux-arm64";
-          sha256 = "9c051f7615319c5520fd9bb5d8621995e2952014019a2c0c7b46695809b0572c";
+          sha256 = "036e12ae798c8a37b1df37be287f3c72f15377a898a3963dc73e6d1a971c2b66";
         };
         "x86_64-darwin" = {
           file = "enumctl-darwin-amd64";
-          sha256 = "42339c84a40b5b6ade04abd8139f658ef6b7e558631a39cf34654099b0fdaa33";
+          sha256 = "aebb11081523502bbbf040016b7676bff1d528094f3c3e553cc4e44bcafc09a6";
         };
         "aarch64-darwin" = {
           file = "enumctl-darwin-arm64";
-          sha256 = "061e5f833293a72dc5b9aae677d87eb569d3d6e5b92cf795a5edca02a4611cdc";
+          sha256 = "6770dd5a0c9676b2e7ae12d220ee82d79ccdd935c12b10d54f104a50eec73365";
         };
       };
 
