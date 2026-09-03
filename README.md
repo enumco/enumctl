@@ -8,7 +8,7 @@ binaries as a Nix flake.
 > release. Do not edit `flake.nix`, `flake.lock`, or this README by hand -
 > changes are overwritten on the next release.
 
-Pinned version: **2026.09.3**
+Pinned version: **2026.09.4**
 
 ## Requirements
 
