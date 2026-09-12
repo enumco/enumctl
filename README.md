@@ -8,7 +8,7 @@ binaries as a Nix flake.
 > release. Do not edit `flake.nix`, `flake.lock`, or this README by hand -
 > changes are overwritten on the next release.
 
-Pinned version: **2026.09.7**
+Pinned version: **2026.09.9**
 
 ## Requirements
 
@@ -34,6 +34,8 @@ Install into a profile:
 nix profile install github:enumco/enumctl
 ```
 
+## NixOS (flake)
+
 Add as a flake input:
 
 ```nix
@@ -42,8 +44,19 @@ Add as a flake input:
 }
 ```
 
-The flake exposes `packages.<system>.enumctl` (the default package) for
-`x86_64-linux`, `aarch64-linux`, `x86_64-darwin`, and `aarch64-darwin`.
+home-manager:
+
+```nix
+{ inputs, ... }:
+{
+  imports = [ inputs.enumctl.homeManagerModules.default ];
+  programs.enumctl.enable = true;
+}
+```
+
+The flake exposes `packages.<system>.enumctl` (the default package) and
+`homeManagerModules.default` (also `homeModules`) for `x86_64-linux`,
+`aarch64-linux`, `x86_64-darwin`, and `aarch64-darwin`.
 
 ## Pinning a version
 
@@ -58,3 +71,7 @@ nix run github:enumco/enumctl/<commit-sha> -- --help
 
 The binaries are downloaded from `https://dl.enum.co/enumctl/<version>/` and
 verified against the SHA-256 checksums pinned in `flake.nix`.
+
+## License
+
+Apache-2.0. See [LICENSE](LICENSE).
